@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title> Guess The Color </title>
+        <link id="pagestyle" rel="stylesheet" type="text/css" href="lightmode.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <script src="scripts.js"></script>
+    <body>
+        <header>
+            <h1 style="font-weight: normal;">Guess The <span style="color: red;">C</span><span style="color: green;">O</span><span style="color: blue;">L</span><span style="color: yellow;">O</span><span style="color: orange;">R</span></h1>
+        </header>
+        <section>
+            <div align="center">
+                <label id="strkLabel"> Streak: 0 |</label><label id="currentTime">| Time: 0</label><br>
+                <label id="avgLabel"> Avg Time: 0 </label><br><br>
+                <label id="indicator" style="background-color: lightgray; padding: 5px; color: black;"> - </label><br><br>
+            </div>
+            <div>
+                <svg width="200" height="200">
+                    <rect id="cube" width="200" height="200" fill="rgb(0,0,255)" />
+                </svg>
+            </div>
+            <div class="gridContainer">
+                <div class="rowContainer"> 
+                    <button id="A" class="optionButton" onclick="chosen('A')">a) rgb(0, 0, 255)</button>
+                    <button id="B" class="optionButton" onclick="chosen('B')">a) rgb(255, 255, 0)</button>
+                </div>
+                <div class="rowContainer"> 
+                    <button id="C" class="optionButton" onclick="chosen('C')">a) rgb(255, 0, 0)</button>
+                    <button id="D" class="optionButton" onclick="chosen('D')">a) rgb(255, 255, 0)</button>
+                </div>
+            </div>
+
+            <div align="center">
+                <button id="resetBtn" onclick="reset()"> Reset </button><br>
+                <button id="modeBtn" onclick="switchTheme()">Dark Mode</button>
+            </div>
+        </section>
+    </body>
+</html>
